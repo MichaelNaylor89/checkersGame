@@ -57,7 +57,7 @@ public class DraughtsBoard {
 				else
 					Place = BLANK;
 				
-				Board[Row][Column] = Place;
+				Board[Column][Row] = Place;
 			}
 			
 		}
@@ -83,13 +83,13 @@ public class DraughtsBoard {
 	    	for (int Column = -1; Column < Xsize; Column++) 
 			{
 					if (Row == -1 && Column > -1)
-						System.out.print(Column+1 + " ");
+						System.out.print(Column+1+" ");
 					else
 					if (Column == -1 && Row >= -1)
 						System.out.print(Row+1 + " ");
 					else
 					{
-						switch (Board[Row][Column])
+						switch (Board[Column][Row])
 						{
 							case BLANK:
 							System.out.print(". ");
